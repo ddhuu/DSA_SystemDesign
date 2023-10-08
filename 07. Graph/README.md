@@ -7,3 +7,5 @@ Given a undirected graph, write an algorithm to find out whether graph contains 
 Given a 2d matrix, find a path from the top left corner to bottom right corner. Assume there exists at least one path, and you only need to find one valid path. You can move up, right, down, left at any position with extra Space Complexity O(m + n).
 ## 04. Topological Sorting
 The topological sort algorithm takes a directed graph and returns an array of the nodes where each node appears before all the nodes it points to.
+## 05. Number of island
+Given a 2d grid map of '1's (land) and '0's (water), count the number of islands in Time Complexity O(Vertices + Edges).
