@@ -9,3 +9,5 @@ Given a 2d matrix, find a path from the top left corner to bottom right corner. 
 The topological sort algorithm takes a directed graph and returns an array of the nodes where each node appears before all the nodes it points to.
 ## 05. Number of island
 Given a 2d grid map of '1's (land) and '0's (water), count the number of islands in Time Complexity O(Vertices + Edges).
+## 06. Dijkstra algorithm
+esign and implement Dijkstra's algorithm which allows us to find the shortest path between any two vertices of a graph in Time Complexity O(E+V*log(V))
