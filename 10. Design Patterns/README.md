@@ -11,3 +11,5 @@ Singleton class is a class that can have only one object at a time.
 Factory  is creational design pattern, this method provides one of the best ways to create an object.
 ## 04. Abstract Factory
 Abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme.
+## 05. Builder
+Builder Design pattern designed to provide a flexible solution to creating complex in oop programming.
