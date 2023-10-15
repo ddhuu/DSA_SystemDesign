@@ -13,3 +13,5 @@ Factory  is creational design pattern, this method provides one of the best ways
 Abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme.
 ## 05. Builder
 Builder Design pattern designed to provide a flexible solution to creating complex in oop programming.
+## 06. Adapter
+Adapter pattern makes two incompatible interfaces compatible without changing their existing code.
