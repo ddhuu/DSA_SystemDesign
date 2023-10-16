@@ -15,3 +15,5 @@ Abstract factory pattern provides a way to encapsulate a group of individual fac
 Builder Design pattern designed to provide a flexible solution to creating complex in oop programming.
 ## 06. Adapter
 Adapter pattern makes two incompatible interfaces compatible without changing their existing code.
+## 07. Strategy
+ Strategy design pattern helps to choose a specific implementation of algorithm or task in run time.
