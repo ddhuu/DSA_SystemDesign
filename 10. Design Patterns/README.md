@@ -17,3 +17,5 @@ Builder Design pattern designed to provide a flexible solution to creating compl
 Adapter pattern makes two incompatible interfaces compatible without changing their existing code.
 ## 07. Strategy
  Strategy design pattern helps to choose a specific implementation of algorithm or task in run time.
+## 08. Observer
+Observer design pattern has a one-to-  many relationship so that when one object changes state, the others are notified and updated automatically.
