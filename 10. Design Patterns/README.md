@@ -1,5 +1,5 @@
 # Design Patterns
-## 01. SOLID : The first 5 princible of Objec Oriented Design
+## 01. SOLID : The first 5 princible of Object Oriented Design
 S- Single responibility principle
 O- Open Closesd principle
 L- Liskov substitution principle
