@@ -19,3 +19,5 @@ Adapter pattern makes two incompatible interfaces compatible without changing th
  Strategy design pattern helps to choose a specific implementation of algorithm or task in run time.
 ## 08. Observer
 Observer design pattern has a one-to-  many relationship so that when one object changes state, the others are notified and updated automatically.
+## 09. Chain of Responsibility
+Chain-of-responsibility pattern is a design pattern consisting of a source of command objects and a series of processing objects.
