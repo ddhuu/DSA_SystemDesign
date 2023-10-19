@@ -21,3 +21,5 @@ Adapter pattern makes two incompatible interfaces compatible without changing th
 Observer design pattern has a one-to-  many relationship so that when one object changes state, the others are notified and updated automatically.
 ## 09. Chain of Responsibility
 Chain-of-responsibility pattern is a design pattern consisting of a source of command objects and a series of processing objects.
+## 10. Deocorator 
+Decorator pattern is a design pattern that allows behavior to be added to an individual object dynamically.
