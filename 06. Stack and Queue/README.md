@@ -8,6 +8,8 @@ Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
 ## 04. Stack that Supports getMin() in O(1)
 Design a data structure which support push()/pop()/findminimum() operation in O(1) time.
 ## 05. Reverse Words in a String
- Given an input string, reverse the string word by word
+ Given an input string, reverse the string word by word.
 ## 06. Find Maximum size rectangle in Binary Sub-matrix
 Given a binary matrix, find the maximum size rectangle binary-submatrix with all 1’s.
+## 07. Next Greater Element
+ Given an array, print the Next Greater Element for every element. The Next greater Element for an element a is the first greater element on the right side of a in array. Elements for which no greater element exist, consider next greater element as -1 .
