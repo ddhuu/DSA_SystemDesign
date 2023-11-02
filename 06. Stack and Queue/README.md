@@ -13,3 +13,5 @@ Design a data structure which support push()/pop()/findminimum() operation in O(
 Given a binary matrix, find the maximum size rectangle binary-submatrix with all 1’s.
 ## 07. Next Greater Element
  Given an array, print the Next Greater Element for every element. The Next greater Element for an element a is the first greater element on the right side of a in array. Elements for which no greater element exist, consider next greater element as -1 .
+## 08. Sliding Window Problem using deque Data Structure
+Given an array and an integer K, find the maximum for each and every contiguous subarray of size k Asked in : Google, Facebook, DE-Shaw.
