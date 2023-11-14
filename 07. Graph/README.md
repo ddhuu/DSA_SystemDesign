@@ -10,4 +10,6 @@ The topological sort algorithm takes a directed graph and returns an array of th
 ## 05. Number of island
 Given a 2d grid map of '1's (land) and '0's (water), count the number of islands in Time Complexity O(Vertices + Edges).
 ## 06. Dijkstra algorithm
-esign and implement Dijkstra's algorithm which allows us to find the shortest path between any two vertices of a graph in Time Complexity O(E+V*log(V))
+Design and implement Dijkstra's algorithm which allows us to find the shortest path between any two vertices of a graph in Time Complexity O(E+V*log(V))
+## 07. Verifying an Alien Dictionary using Topological Algorithm
+You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language used by aliens. Write Algorithm to Derive the order of letters in this in Time Complexity O(edges +vertices).
