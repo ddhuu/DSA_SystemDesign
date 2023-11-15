@@ -10,3 +10,4 @@ Finding an arrangement of N Queens on a chess board, such that no queen can atta
 ## 05. Knight Walk Problem
 Given a square chess board of NxN size, the position of the Knight and position of the target is given.
 We need to find out minimum step a Knight will take to reach the target position. 
+##06. 
