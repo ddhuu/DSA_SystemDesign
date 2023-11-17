@@ -10,4 +10,5 @@ Finding an arrangement of N Queens on a chess board, such that no queen can atta
 ## 05. Knight Walk Problem
 Given a square chess board of NxN size, the position of the Knight and position of the target is given.
 We need to find out minimum step a Knight will take to reach the target position. 
-##06. 
+## 06. Wellformed Parenthese
+ Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
