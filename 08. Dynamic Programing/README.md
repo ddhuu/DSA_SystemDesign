@@ -7,3 +7,5 @@ Given two words word1 of length m and word2 of length n, find the minimum number
 Given an array [] of length N and an integer Sum , the task is to find the number of subsets with equal to sum. 
 ## 04. Coin Change
 Given an unlimited supply of coins of given denominations, find the total number of distinct ways to get a desired change in Time and Space Complexity in O(n^2).
+## 05. Maximum Profit in Jobs Scheduling
+ We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].You're given the startTime, endTime and profit arrays, you need to output the maximum profit you can take such that there are no 2 jobs in the subset with an overlapping time range.If you choose a job that ends at time X you will be able to start another job that starts at time X
