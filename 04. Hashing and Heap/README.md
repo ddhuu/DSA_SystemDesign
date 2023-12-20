@@ -53,3 +53,57 @@ private:
     }
 };
 ```
+## 05. Given k sorted array, write an efficient algorithm to merge them into one sorted array.
+```cpp
+// Merge k sorted array
+/*
+class MinHeapNode{
+int i,j,val;
+}
+1. Add element at last, perculate up
+2. Extract min element using Perculate down
+Note: check if (MinNodeHeap[(i-1)/2].val < MinNodeHeap[i].val )
+*/
+#include <queue>
+#include <vector>
+
+struct CompareNode {
+    bool operator()(ListNode* const & p1, ListNode* const & p2) {
+        // priority queue is a max heap by default, we need to provide a comparison function for min heap
+        return p1->val > p2->val;
+    }
+};
+
+class Solution {
+public:
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        std::priority_queue<ListNode*, vector<ListNode*>, CompareNode> minHeap;
+
+        // Initialize the min heap with the first node from each list
+        for (auto list : lists) {
+            if (list) {
+                minHeap.push(list);
+            }
+        }
+
+        // Create a new dummy head for the result list
+        ListNode dummy(0);
+        ListNode* tail = &dummy;
+
+        // Extract the minimum node from the min heap and add it to the result list
+        while (!minHeap.empty()) {
+            ListNode* minNode = minHeap.top();
+            minHeap.pop();
+            tail->next = minNode;
+            tail = tail->next;
+
+            // Add the next node from the same list to the min heap
+            if (minNode->next) {
+                minHeap.push(minNode->next);
+            }
+        }
+
+        return dummy.next;
+    }
+};
+```
