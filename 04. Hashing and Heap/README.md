@@ -62,8 +62,7 @@ int i,j,val;
 }
 1. Add element at last, perculate up
 2. Extract min element using Perculate down
-Note: check if (MinNodeHeap[(i-1)/2].val < MinNodeHeap[i].val )
-*/
+Note: check if (MinNodeHeap[(i-1)/2].val < MinNodeHeap[i].val )*/
 #include <queue>
 #include <vector>
 
