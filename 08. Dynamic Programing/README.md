@@ -9,3 +9,51 @@ Given an array [] of length N and an integer Sum , the task is to find the numbe
 Given an unlimited supply of coins of given denominations, find the total number of distinct ways to get a desired change in Time and Space Complexity in O(n^2).
 ## 05. Maximum Profit in Jobs Scheduling
  We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].You're given the startTime, endTime and profit arrays, you need to output the maximum profit you can take such that there are no 2 jobs in the subset with an overlapping time range.If you choose a job that ends at time X you will be able to start another job that starts at time X
+ ```cpp
+
+1. Sort on the basis of finish time
+2. Compare every two jobs whether they can overlap
+
+using namespace std;
+
+struct Job {
+    int start, finish, profit;
+};
+
+bool jobComparator(Job s1, Job s2) {
+    return (s1.finish < s2.finish);
+}
+
+int findLastNonConflictingJob(vector<Job>& jobs, int n) {
+    for (int i = n - 1; i >= 0; i--) {
+        if (jobs[i].finish <= jobs[n].start) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+class Solution {
+public:
+    int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
+        int n = startTime.size();
+        vector<Job> jobs(n);
+        for (int i = 0; i < n; i++) {
+            jobs[i] = {startTime[i], endTime[i], profit[i]};
+        }
+        sort(jobs.begin(), jobs.end(), jobComparator);
+        vector<int> dp(n);
+        dp[0] = jobs[0].profit;
+        for (int i = 1; i < n; i++) {
+            int inclProfit = jobs[i].profit;
+            int l = findLastNonConflictingJob(jobs, i);
+            if (l != -1) {
+                inclProfit += dp[l];
+            }
+            dp[i] = max(inclProfit, dp[i - 1]);
+        }
+        return dp[n - 1];
+    }
+};
+
+ ```
