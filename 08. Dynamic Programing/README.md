@@ -8,7 +8,7 @@ Given an array [] of length N and an integer Sum , the task is to find the numbe
 ## 04. Coin Change
 Given an unlimited supply of coins of given denominations, find the total number of distinct ways to get a desired change in Time and Space Complexity in O(n^2).
 ## 05. Maximum Profit in Jobs Scheduling
- We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].You're given the startTime, endTime and profit arrays, you need to output the maximum profit you can take such that there are no 2 jobs in the subset with an overlapping time range.If you choose a job that ends at time X you will be able to start another job that starts at time X
+ We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].You're given the startTime, endTime and profit arrays, you need to output the maximum profit you can take such that there are no 2 jobs in the subset with an overlapping time range.If you choose a job that ends at time X you will be able to start another job that starts at time X.
  ```cpp
 
 1. Sort on the basis of finish time
@@ -29,7 +29,7 @@ int findLastNonConflictingJob(vector<Job>& jobs, int n) {
         if (jobs[i].finish <= jobs[n].start) {
             return i;
         }
-    }
+    }   
     return -1;
 }
 
@@ -83,5 +83,10 @@ public:
         return dp[0][n - 1];
     }
 };
+
+```
+## 07. Word Break Using Memoization
+Given an input string and a dictionary of words, find out if the input string can be segmented into a space-separated sequence of dictionary words in Space Complexity O(n^2).
+```cpp
 
 ```
