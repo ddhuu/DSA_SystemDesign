@@ -74,5 +74,30 @@ class Solution {
 ```
 ## 08. All Paths
  Given a directed, acyclic graph of N nodes.  Find all possible paths from node 0 to node N-1, and return them in any order.
+ ```java
+ class Solution {
+    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        path.add(0);
+        dfs(graph, 0, path, result);
+        return result;
+    }
+
+    private void dfs(int[][] graph, int node, List<Integer> path, List<List<Integer>> result) {
+        if (node == graph.length - 1) {
+            result.add(new ArrayList<>(path));
+            return;
+        }
+
+        for (int nextNode : graph[node]) {
+            path.add(nextNode);
+            dfs(graph, nextNode, path, result);
+            path.remove(path.size() - 1);
+        }
+    }
+}
+
+ ```
 ## 09. Breadth first search algorithm to solve Rotten Orange Problem
 A matrix of mxn where each cell in the matrix have Fresh,Rotten and Empty Cell. Write algorithm to find minimum time required so that all the oranges become rotten in Time Complexity O(mxn) and Space Complexity O(mxn).
