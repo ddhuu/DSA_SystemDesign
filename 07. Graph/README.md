@@ -101,3 +101,63 @@ class Solution {
  ```
 ## 09. Breadth first search algorithm to solve Rotten Orange Problem
 A matrix of mxn where each cell in the matrix have Fresh,Rotten and Empty Cell. Write algorithm to find minimum time required so that all the oranges become rotten in Time Complexity O(mxn) and Space Complexity O(mxn).
+```java
+
+class Solution {
+    public int orangesRotting(int[][] grid) {
+        class Cell {
+            int x, y, time;
+            Cell(int x, int y, int time) {
+                this.x = x;
+                this.y = y;
+                this.time = time;
+            }
+        }
+
+        Queue<Cell> queue = new LinkedList<>();
+        int freshOranges = 0;
+
+        // Add the position of all rotten oranges to queue
+        // count the number of fresh oranges
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 2) {
+                    queue.add(new Cell(i, j, 0));
+                } else if (grid[i][j] == 1) {
+                    freshOranges++;
+                }
+            }
+        }
+
+        // if no fresh oranges, return 0
+        if (freshOranges == 0) {
+            return 0;
+        }
+
+        int[][] directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        int timeElapsed = 0;
+
+        // process the rotten oranges
+        while (!queue.isEmpty()) {
+            Cell current = queue.poll();
+            timeElapsed = current.time;
+            for (int[] direction : directions) {
+                int nextX = current.x + direction[0];
+                int nextY = current.y + direction[1];
+                if (nextX >= 0 && nextX < grid.length && nextY >= 0 && nextY < grid[0].length && grid[nextX][nextY] == 1) {
+                    grid[nextX][nextY] = 2;
+                    queue.add(new Cell(nextX, nextY, current.time + 1));
+                    freshOranges--;
+                }
+            }
+        }
+
+        // if any fresh oranges left, return -1
+        if (freshOranges > 0) {
+            return -1;
+        }
+
+        return timeElapsed;
+    }
+}
+```
