@@ -161,3 +161,55 @@ class Solution {
     }
 }
 ```
+## 10. Understanding Queue based approach to Jumping Number problem
+A number is called as a Jumping Number if all adjacent digits in it differ by 1. The difference between ‘9’ and ‘0’ is not considered as 1. Given a positive number x, print all Jumping Numbers smaller than or equal to x in Time Complexity O(Jumping_Numer) Asked in : Morgan Stanley, OLA, NetApp
+```java
+import java.util.*;
+
+class Main {
+    public static void printJumpingNumbers(int x) {
+        // All single digit numbers are jumping numbers
+        for (int i = 0; i <= 9 && i <= x; i++) {
+            bfs(x, i);
+        }
+    }
+
+    public static void bfs(int x, int num) {
+        // Create a queue and enqueue 'num'
+        Queue<Integer> q = new LinkedList<>();
+        q.add(num);
+
+        while (!q.isEmpty()) {
+            num = q.peek();
+            q.poll();
+
+            if (num <= x) {
+                System.out.print(num + " ");
+                int last_digit = num % 10;
+
+                // If last digit is 0, append next digit only
+                if (last_digit == 0) {
+                    q.add((num * 10) + (last_digit + 1));
+                }
+
+                // If last digit is 9, append previous digit only
+                else if (last_digit == 9) {
+                    q.add((num * 10) + (last_digit - 1));
+                }
+
+                // If last digit is neighter 0 nor 9, append both previous and next digits
+                else {
+                    q.add((num * 10) + (last_digit - 1));
+                    q.add((num * 10) + (last_digit + 1));
+                }
+            }
+        }
+    }
+
+    public static void main(String args[]) {
+        int x = 50;
+        printJumpingNumbers(x);
+    }
+}
+```
+
